@@ -12,8 +12,6 @@
 
 本项目演示了一个结合 **CLIP**、**Faiss** 和 **智谱 AI**，能够处理文本和图像数据的检索增强生成 (Retrieval-Augmented Generation, RAG) 系统。
 
-<!-- 可选：在这里添加一个简短的 Demo GIF 或截图 -->
-<!-- ![Project Demo GIF](link_to_your_demo.gif) -->
 
 ---
 
@@ -86,7 +84,7 @@
 1.  **准备数据 (见下方 [数据准备](#-数据准备) 部分)。**
 
 2.  **(可选) 修改脚本内配置:**
-    您可以在主 Python 脚本 (`yangrouchuan.py`) 中直接修改以下变量的默认值：
+    您可以在主 Python 脚本 (`MultimodalRAG0428.ipynb`) 中直接修改以下变量的默认值：
     *   `json_data_path` (默认: `'data.json'`)
     *   `image_directory_path` (默认: `'images/'`)
     *   `db_file` (默认: `'multimodal_rag_data.db'`)

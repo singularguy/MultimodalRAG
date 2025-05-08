@@ -1,27 +1,10 @@
-import sqlite3
-import os
-import numpy as np
-from typing import List, Dict, Union, Optional, Tuple
-import faiss
-from transformers import AutoTokenizer, AutoModel # 用于文本嵌入
-from PIL import Image
-import torch
-import zhipuai # 用于文本生成 LLM
-import json
-import time
-import random
-
-写一个requirement.txt
-requirements = [
-    "sqlite3",
-    "os",
-    "numpy",
-    "typing",
-    "transformers",
-    "PIL",
-    "torch",
-    "zhipuai",
-    "json",
-    "time",
-    "random"
-]
+numpy
+faiss-cpu # 或者 faiss-gpu，如果你有支持CUDA的GPU并希望使用GPU加速
+transformers
+sentencepiece # 与transformers一起使用时，通常建议包含，特别是某些分词器需要
+Pillow
+torch # 你可能需要指定版本或CUDA版本，例如：torch==2.0.1+cu118
+# torchvision # 通常与torch和图像任务一起使用，但你的导入中未直接体现
+# torchaudio  # 通常与torch和音频任务一起使用，但你的导入中未直接体现
+zhipuai
+(版本都直接 pip下载就可以 基本不会报错 )
