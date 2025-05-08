@@ -1,10 +1,22 @@
+# --- 核心机器学习与向量处理 ---
 numpy
-faiss-cpu # 或者 faiss-gpu，如果你有支持CUDA的GPU并希望使用GPU加速
+torch
+# 对于 Faiss，请根据您的环境选择一个:
+faiss-cpu  # 如果你只使用 CPU
+# faiss-gpu # 如果你有兼容的 NVIDIA GPU 和 CUDA 环境，并希望使用 GPU 加速
+
+# --- Hugging Face Transformers (用于 CLIP 模型) ---
 transformers
-sentencepiece # 与transformers一起使用时，通常建议包含，特别是某些分词器需要
+sentencepiece # transformers 的常见依赖，用于某些分词器
+
+# --- 图像处理 ---
 Pillow
-torch # 你可能需要指定版本或CUDA版本，例如：torch==2.0.1+cu118
-# torchvision # 通常与torch和图像任务一起使用，但你的导入中未直接体现
-# torchaudio  # 通常与torch和音频任务一起使用，但你的导入中未直接体现
+
+# --- 大语言模型 API ---
 zhipuai
-(版本都直接 pip下载就可以 基本不会报错 )
+
+# --- (可选，如果你的项目将来可能需要) ---
+# 如果你计划使用更广泛的 PyTorch 生态，可能会用到:
+# torchvision
+# torchaudio
+(版本都直接 pip下载就可以 基本不会冲突 )
